@@ -11,7 +11,6 @@ umls_api_search(
   includeObsolete = NULL,
   includeSuppressible = NULL,
   returnIdType = NULL,
-  sabs = NULL,
   pageSize = 100,
   sleep_time = 5
 )
@@ -29,9 +28,9 @@ umls_api_search(
 
 \item{returnIdType}{(optional)  Specifies the type of identifier you wish to retrieve.}
 
-\item{sabs}{(optional)  Comma-separated list of source vocabularies to include in your search}
-
 \item{pageSize}{(optional)  Whole number that specifies the number of results to include per page.}
+
+\item{sabs}{(optional)  Comma-separated list of source vocabularies to include in your search}
 
 \item{pageNumber}{(optional)  Whole number that specifies which page of results to fetch.}
 }

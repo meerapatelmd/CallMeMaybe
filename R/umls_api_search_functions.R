@@ -163,7 +163,6 @@ umls_api_search <-
                  includeObsolete = NULL,
                  includeSuppressible = NULL,
                  returnIdType = NULL,
-                 sabs = NULL,
                  pageSize = 100,
                  sleep_time = 5) {
 
@@ -191,7 +190,6 @@ umls_api_search <-
                 output <-
                         tibble::tibble(
                                 search_datetime = Sys.time(),
-                                concept = concept,
                                 string = string,
                                 searchType = searchType,
                                 classType = parsed_response$result$classType,
