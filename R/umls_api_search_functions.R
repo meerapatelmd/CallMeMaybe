@@ -1,6 +1,5 @@
 #' @title
 #' Functions that Make and Parse API Calls
-#' @description
 #' @seealso
 #'  \code{\link[httr]{POST}},\code{\link[httr]{content}},\code{\link[httr]{status_code}}
 #'  \code{\link[rvest]{html_nodes}},\code{\link[rvest]{html_text}}
