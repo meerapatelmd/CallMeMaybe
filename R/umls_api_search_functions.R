@@ -179,7 +179,6 @@ umls_api_search <-
                                                includeObsolete = includeObsolete,
                                                includeSuppressible = includeSuppressible,
                                                returnIdType = returnIdType,
-                                               sabs = sabs,
                                                ticket = get_service_ticket()))
 
                 parsed_response <-
