@@ -1,17 +1,26 @@
 Package: CallMeMaybe
 Title: Make Calls to the UMLS REST API
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person(given = "Meera",
            family = "Patel, MD",
            role = c("aut", "cre"),
            email = "patelmeeray@gmail.com",
            comment = c(ORCID = "0000-0002-3401-3948"))
-Description: This package makes API calls to t
+Description: This package makes API calls to the UMLS API.
 License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
-    magrittr
+    magrittr,
+    dplyr,
+    httr,
+    jsonlite,
+    pg13,
+    rvest,
+    tibble
+Remotes:
+    meerapatelmd/pg13
+
