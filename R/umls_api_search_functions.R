@@ -1,5 +1,5 @@
 #' @title
-#' Search
+#' Search the UMLS Metathesaurus
 #'
 #' @param string			 A human readable term, such as ‘gestatational diabetes’, or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US.
 #' @param inputType			 (optional)  Specifies the data type you are using as your search parameter.

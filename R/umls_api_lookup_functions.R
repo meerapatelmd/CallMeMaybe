@@ -18,8 +18,7 @@ lookup_concept <-
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content/current/CUI/",CUI)
 
                 link_response <- httr::GET(url = baseURL,
-                                                   ## /content/current/CUI/C0009044, ## /content/current/CUI/C0009044/atoms, ## /content/current/CUI/C0009044/definitions, ## /content/current/CUI/C0009044/relations
-                                                   query = list(ticket = get_service_ticket())
+                                           query = list(ticket = get_service_ticket())
                 )
 
                 link_response %>%
@@ -79,8 +78,7 @@ list_atoms <-
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content/current/CUI/",CUI, "/atoms")
 
                 link_response <- httr::GET(url = baseURL,
-                                                   ## /content/current/CUI/C0155502/atoms, ## /content/current/CUI/C0155502/atoms/preferred, ## /content/current/CUI/C0155502/atoms?language=ENG, ## /content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT, ## /content/current/source/SNOMEDCT_US/111541001/atoms, ## /content/current/source/SNOMEDCT_US/111541001/atoms/preferred, ## /content/current/AUI/A8345234, ## /content/current/AUI/A8345234/ancestors, ## /content/current/AUI/A8345234/descendants, ## /content/current/AUI/A8345234/parents, ## /content/current/AUI/A8345234/children
-                                                   query = list(ticket = get_service_ticket(),
+                                           query = list(ticket = get_service_ticket(),
                                                                 sabs = sabs,
                                                                 ttys = ttys,
                                                                 language = language,
@@ -147,7 +145,6 @@ lookup_atoms <-
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content/current/AUI/",AUI)
 
                 link_response <- httr::GET(url = baseURL,
-                                           ## /content/current/CUI/C0155502/atoms, ## /content/current/CUI/C0155502/atoms/preferred, ## /content/current/CUI/C0155502/atoms?language=ENG, ## /content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT, ## /content/current/source/SNOMEDCT_US/111541001/atoms, ## /content/current/source/SNOMEDCT_US/111541001/atoms/preferred, ## /content/current/AUI/A8345234, ## /content/current/AUI/A8345234/ancestors, ## /content/current/AUI/A8345234/descendants, ## /content/current/AUI/A8345234/parents, ## /content/current/AUI/A8345234/children
                                            query = list(ticket = get_service_ticket(),
                                                         sabs = sabs,
                                                         ttys = ttys,
@@ -289,8 +286,7 @@ lookup_source_parents <-
 
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content/current/source/",sab, "/", sourceId, "/parents")
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /content/current/source/SNOMEDCT_US/9468002/parents, ## /content/current/source/SNOMEDCT_US/9468002/children
-                                                   query = list(ticket = ticket,
+                                                   query = list(ticket = get_service_ticket(),
                                                                 pageNumber = pageNumber,
                                                                 pageSize = pageSize)
                 )
@@ -325,7 +321,7 @@ lookup_source_children <-
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content/current/source/",sab, "/", sourceId, "/children")
 
                 link_response <- httr::GET(url = baseURL,
-                                                   query = list(ticket = ticket,
+                                                   query = list(ticket = get_service_ticket(),
                                                                 pageNumber = pageNumber,
                                                                 pageSize = pageSize)
                 )
@@ -358,7 +354,6 @@ lookup_source_ancestors <-
 
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /content/current/source/SNOMEDCT_US/9468002/ancestors, ## /content/current/source/SNOMEDCT_US/9468002/descendants
                                                    query = list(ticket = get_service_ticket(),
                                                                 pageNumber = pageNumber,
                                                                 pageSize = pageSize)
@@ -392,7 +387,6 @@ lookup_source_descendants <-
 
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /content/current/source/SNOMEDCT_US/9468002/ancestors, ## /content/current/source/SNOMEDCT_US/9468002/descendants
                                            query = list(ticket = get_service_ticket(),
                                                         pageNumber = pageNumber,
                                                         pageSize = pageSize)
@@ -437,7 +431,6 @@ lookup_source_relations <-
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content/current/source/", vocabulary, "/", sourceId,"/relations")
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /content/current/source/LNC/44255-8/relations
                                                    query = list(ticket = get_service_ticket(),
                                                                 includeRelationLabels = includeRelationLabels,
                                                                 includeAdditionalRelationLabels = includeAdditionalRelationLabels,
@@ -479,7 +472,6 @@ list_subsets <-
 
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /subsets/current, ## /subsets/current/source/SNOMEDCT_US/6011000124106, ## /subsets/current/source/SNOMEDCT_US/6011000124106/members, ## /subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103
                                                    query = list(ticket = get_service_ticket(),
                                                                 pageNumber = pageNumber,
                                                                 pageSize = pageSize,
@@ -520,7 +512,6 @@ list_source_subsets <-
 
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /subsets/current, ## /subsets/current/source/SNOMEDCT_US/6011000124106, ## /subsets/current/source/SNOMEDCT_US/6011000124106/members, ## /subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103
                                            query = list(ticket = get_service_ticket(),
                                                         pageNumber = pageNumber,
                                                         pageSize = pageSize,
@@ -621,7 +612,6 @@ list_content_views <-
 
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /content-views/current, ## /content-views/current/CUI/C2711988, ## /content-views/current/CUI/C2711988/members, ## /content-views/current/CUI/C2711988/member/238788004
                                                    query = list(ticket = get_service_ticket(),
                                                                 pageNumber = pageNumber,
                                                                 pageSize = pageSize)
@@ -657,7 +647,6 @@ lookup_content_view_members <-
                 baseURL <- paste0("https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/", CUI, "/members")
 
                 link_response <- httr::GET(url = baseURL,
-                                           # path = ## /content-views/current, ## /content-views/current/CUI/C2711988, ## /content-views/current/CUI/C2711988/members, ## /content-views/current/CUI/C2711988/member/238788004
                                            query = list(ticket = get_service_ticket(),
                                                         pageNumber = pageNumber,
                                                         pageSize = pageSize)
