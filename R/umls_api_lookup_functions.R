@@ -119,7 +119,7 @@ list_atoms <-
 #' '/content/current/AUI/A8345234/children'path Retrieve children of a UMLS atom and returns a JSON Object classType of Atom
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_atoms
 #' @export
 #' @importFrom httr GET content
 
@@ -172,7 +172,7 @@ lookup_atoms <-
 #' '/content/current/CUI/C0155502/definitions'path Retrieves definitions of the CUI and returns a JSON Object classType of Definition
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_definitions
 #' @export
 #' @importFrom httr GET content
 
@@ -205,7 +205,7 @@ lookup_definitions <-
 #' '/content/current/CUI/C0009044/relations' path Retrieves NLM-asserted relationships of the CUI and returns a JSON Object classType of ConceptRelation
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_relations
 #' @export
 #' @importFrom httr GET content
 
@@ -241,7 +241,7 @@ lookup_relations <-
 #' '/content/current/source/SNOMEDCT_US/9468002/attributes'path Retrieves information about source-asserted attributes and returns a JSON Object classType of Attribute
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_asserted_identifiers
 #' @export
 #' @importFrom httr GET content
 
@@ -273,7 +273,7 @@ lookup_source_asserted_identifiers <-
 #' '/content/current/source/SNOMEDCT_US/9468002/children'path Retrieves children of a source-asserted identifier and returns a JSON Object classType of SourceAtomCluster*
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_parents
 #' @export
 #' @importFrom httr GET content
 
@@ -307,7 +307,7 @@ lookup_source_parents <-
 #' '/content/current/source/SNOMEDCT_US/9468002/children'path Retrieves children of a source-asserted identifier and returns a JSON Object classType of SourceAtomCluster*
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_children
 #' @export
 #' @importFrom httr GET content
 
@@ -342,7 +342,7 @@ lookup_source_children <-
 #' '/content/current/source/SNOMEDCT_US/9468002/descendants'path Retrieves descendants of a source-asserted identifier and returns a JSON Object classType of SourceAtomCluster*
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_ancestors
 #' @export
 #' @importFrom httr GET content
 
@@ -374,7 +374,7 @@ lookup_source_ancestors <-
 #' '/content/current/source/SNOMEDCT_US/9468002/descendants'path Retrieves descendants of a source-asserted identifier and returns a JSON Object classType of SourceAtomCluster*
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_descendants
 #' @export
 #' @importFrom httr GET content
 
@@ -412,7 +412,7 @@ lookup_source_descendants <-
 #' '/content/current/source/LNC/44255-8/relations'path Retrieves relationships of LOINC code 44255-8 and returns a JSON Object classType of AtomClusterRelation
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_relations
 #' @export
 #' @importFrom httr GET content
 
@@ -458,7 +458,7 @@ lookup_source_relations <-
 #' '/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103' path Retrieves an individual member of a SNOMED CT subset and returns a JSON Object classType of SourceConceptSubsetMember
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname list_subsets
 #' @export
 #' @importFrom httr GET content
 
@@ -497,7 +497,7 @@ list_subsets <-
 #' '/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103' path Retrieves an individual member of a SNOMED CT subset and returns a JSON Object classType of SourceConceptSubsetMember
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname list_source_subsets
 #' @export
 #' @importFrom httr GET content
 
@@ -533,7 +533,7 @@ list_source_subsets <-
 #' '/content/current/source/SNOMEDCT_US/9468002/attributes'path Retrieves attributes of the SNOMED CT concept and returns a JSON Object classType of Attribute
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_source_attributes
 #' @export
 #' @importFrom httr GET content
 
@@ -567,7 +567,7 @@ lookup_source_attributes <-
 #' /semantic-network/current/TUI/T109' path Retrieves TUI and returns a JSON Object classType of SemanticType
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_semantic_network
 #' @export
 #' @importFrom httr GET content
 
@@ -599,7 +599,7 @@ lookup_semantic_network <-
 #' '/content-views/current/CUI/C2711988/member/238788004' path Retrieves an individual member of the SNOMED CT CORE Problem List content view and returns a JSON Object classType of SourceConceptContentViewMember
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname list_content_views
 #' @export
 #' @importFrom httr GET content
 
@@ -634,7 +634,7 @@ list_content_views <-
 #' '/content-views/current/CUI/C2711988/member/238788004' path Retrieves an individual member of the SNOMED CT CORE Problem List content view and returns a JSON Object classType of SourceConceptContentViewMember
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_content_view_members
 #' @export
 #' @importFrom httr GET content
 
@@ -669,7 +669,7 @@ lookup_content_view_members <-
 #' '/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US'path Retrieves all SNOMEDCT_US codes that share a UMLS CUI with HP:0001947 and returns a JSON Object classType of SourceAtomCluster
 #' @seealso
 #'  \code{\link[httr]{GET}},\code{\link[httr]{content}}
-#' @rdname list_atoms
+#' @rdname lookup_crosswalk
 #' @export
 #' @importFrom httr GET content
 

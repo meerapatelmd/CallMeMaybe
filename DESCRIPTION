@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "patelmeeray@gmail.com",
            comment = c(ORCID = "0000-0002-3401-3948"))
-Description: This package makes API calls to the UMLS API.
+Description: This package makes API calls to the UMLS REST API. 
 License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
