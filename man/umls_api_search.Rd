@@ -2,7 +2,7 @@
 % Please edit documentation in R/umls_api_search_functions.R
 \name{umls_api_search}
 \alias{umls_api_search}
-\title{Search}
+\title{Search the UMLS Metathesaurus}
 \usage{
 umls_api_search(
   string,
@@ -35,7 +35,7 @@ umls_api_search(
 \item{pageNumber}{(optional)  Whole number that specifies which page of results to fetch.}
 }
 \description{
-Search
+Search the UMLS Metathesaurus
 }
 \details{
 '/search/current?string=fracture of carpal bone'path Retrieves CUIs for a search term and returns a JSON Object classType of searchResults
