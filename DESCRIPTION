@@ -18,9 +18,6 @@ Imports:
     dplyr,
     httr,
     jsonlite,
-    pg13,
     rvest,
     tibble
-Remotes:
-    meerapatelmd/pg13
-
+URL: https://meerapatelmd.github.io/CallMeMaybe/, https://github.com/meerapatelmd/CallMeMaybe/BugReports: https://github.com/meerapatelmd/CallMeMaybe/issues/
